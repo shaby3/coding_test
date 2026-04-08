@@ -5,8 +5,8 @@ arr = list(map(int, input().split()))
 def func(cur_val, idx):
     if idx == n:
         return cur_val
+        
+    return func(max(cur_val, arr[idx]), idx + 1)
 
-    func(max(cur_val, arr[idx]), idx + 1)
-print(arr)
 ans = func(arr[0], 1)
 print(ans)
