@@ -13,8 +13,8 @@ def func(cur, idx):
     if idx == n:
         return cur
     
-    gcd = get_gcd(num1, num2)
-    return func(gcd, idx + 1)
+    gcd = get_gcd(cur, arr[idx])
+    return func(cur * arr[idx] // gcd, idx + 1)
 
 
 print(func(arr[0], 1))
