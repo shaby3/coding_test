@@ -10,4 +10,6 @@ day_time = min_per_day * (a - 11)
 # 시, 분을 활용한 소요 분 계산
 min_time = (b * 60 + c) - (11 * 60 + 11)
 
-print(day_time + min_time)
+ans_time = max(-1, day_time + min_time)
+
+print(ans_time)
