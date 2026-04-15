@@ -8,4 +8,4 @@ if m1 == m2:
 elif m1 == m2 - 1:
     print(num_of_days[m1] - d1 + 1 + d2)
 else:
-    print(sum(num_of_days[m1 + 1: m2 + 1]) + num_of_days[m1] - d1 + 1 + d2)
+    print(sum(num_of_days[m1 + 1: m2]) + num_of_days[m1] - d1 + 1 + d2)
