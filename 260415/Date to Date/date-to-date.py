@@ -13,5 +13,5 @@ def num_of_days(m, d):
 
     return total_days
 
-total_days = num_of_days(m2, d2) - num_of_days(m1, d1)
+total_days = num_of_days(m2, d2) - num_of_days(m1, d1) + 1
 print(total_days)
