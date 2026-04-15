@@ -1,11 +1,17 @@
 m1, d1, m2, d2 = map(int, input().split())
 
 # Please write your code here.
-num_of_days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+def num_of_days(m, d):
+    days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-if m1 == m2:
-    print(d2 - d1 + 1)
-elif m1 == m2 - 1:
-    print(num_of_days[m1] - d1 + 1 + d2)
-else:
-    print(sum(num_of_days[m1 + 1: m2]) + num_of_days[m1] - d1 + 1 + d2)
+    total_days = 0
+    
+    for i in range(1, m):
+        total_days += days[i]
+
+    total_days += d
+
+    return total_days
+
+total_days = num_of_days(m2, d2) - num_of_days(m1, d1)
+print(total_days)
