@@ -16,7 +16,7 @@ x1[2], y1[2], x2[2], y2[2] = map(int, input().split())
 mat = [[0] * (MAX_W + 1) for _ in range(MAX_H + 1)]
 
 for idx in range(3):
-    i1, j1, i2, j2 = x1[idx], y1[idx], x2[idx], y2[idx]
+    i1, j1, i2, j2 = x1[idx] + OFFSET, y1[idx] + OFFSET, x2[idx] + OFFSET, y2[idx] + OFFSET
 
     for x in range(i1, i2):
         for y in range(j1, j2):
