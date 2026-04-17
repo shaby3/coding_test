@@ -24,4 +24,8 @@ for i in range(len(mat)):
             min_j = min(j, min_j)
             max_j = max(j, max_j)
 
-print((max_i - min_i + 1) * (max_j - min_j + 1))
+ans = (max_i - min_i + 1) * (max_j - min_j + 1)
+if ans == (x2[0] - x1[0] + 1) * (y2[0] - y1[0] + 1):
+    print(0)
+else:
+    print((max_i - min_i + 1) * (max_j - min_j + 1))
