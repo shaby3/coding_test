@@ -16,16 +16,18 @@ for idx in range(2):
             mat[i][j] += (idx + 1)
 
 min_i, max_i, min_j, max_j = MAX_R, 0, MAX_R, 0
+flag = False
 for i in range(len(mat)):
     for j in range(len(mat)):
         if mat[i][j] == 1:
+            flag = True
             min_i = min(i, min_i)
             max_i = max(i, max_i)
             min_j = min(j, min_j)
             max_j = max(j, max_j)
 
 ans = (max_i - min_i + 1) * (max_j - min_j + 1)
-if ans == (x2[0] - x1[0] + 1) * (y2[0] - y1[0] + 1):
-    print(0)
+if flag:
+    print(ans)
 else:
-    print((max_i - min_i + 1) * (max_j - min_j + 1))
+    print(0)
