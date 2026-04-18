@@ -13,3 +13,5 @@ for student_num in student:
     if count[student_num] == K:
         print(student_num)
         break
+else:
+    print(-1)
