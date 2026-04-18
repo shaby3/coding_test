@@ -22,11 +22,11 @@ time2 = [0]
 
 for velocity, time in zip(v, t):
     for _ in range(time):
-        time1.append(velocity)
+        time1.append(time1[-1] + velocity)
 
 for velocity, time in zip(v2, t2):
     for _ in range(time):
-        time2.append(velocity)
+        time2.append(time2[-1] + velocity)
 
 prev_state = 0
 ans = 0
@@ -41,7 +41,5 @@ for idx in range(1, len(time1)):
         if prev_state == 1:
             ans += 1
         prev_state = state
-    else:
-        prev_state = 0
 
 print(ans)
