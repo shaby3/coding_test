@@ -41,4 +41,4 @@ for idx in range(1, len(time2)):
         print(idx)
         break
 else:
-    print(print(-1))
+    print(-1)
