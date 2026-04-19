@@ -25,11 +25,11 @@ for t, x, y in handshakes:
     if remain_cnt[x] != 0 and remain_cnt[y] != 0:
         remain_cnt[x] -= 1
         remain_cnt[y] -= 1
-    elif remain_cnt[x] != 0:
+    elif remain_cnt[y] == 0:
         remain_cnt[x] -= 1
         remain_cnt[y] = K
         checked[y] = 1
-    elif remain_cnt[y] != 0:
+    elif remain_cnt[x] == 0:
         remain_cnt[x] = K
         remain_cnt[y] -= 1    # 만약 x만 감염된 상태면
         checked[x] = 1
