@@ -13,7 +13,6 @@ handshakes.sort()
 
 # 정리를 하자면 총 T번의 악수가 진행되는데 감염될 경우 K번의 악수 동안만 전염병을 옮김
 # 남은 전염 횟수를 나타내는 배열 1개
-
 remain_cnt = [0] * (N + 1)
 checked = [0] * (N + 1)
 
@@ -25,14 +24,16 @@ for t, x, y in handshakes:
     if remain_cnt[x] != 0 and remain_cnt[y] != 0:
         remain_cnt[x] -= 1
         remain_cnt[y] -= 1
-    elif remain_cnt[y] == 0:
+    elif remain_cnt[x] != 0:
         remain_cnt[x] -= 1
-        remain_cnt[y] = K
+        if checked[y] == 0:
+            remain_cnt[y] = K
         checked[y] = 1
-    elif remain_cnt[x] == 0:
-        remain_cnt[x] = K
+    elif remain_cnt[y] != 0:
+        if checked[x] == 0:
+            remain_cnt[x] = K
         remain_cnt[y] -= 1    # 만약 x만 감염된 상태면
         checked[x] = 1
 
 for idx in range(1, N + 1):
-    print(checked[idx], end = '')    
+    print(checked[idx], end = '')
