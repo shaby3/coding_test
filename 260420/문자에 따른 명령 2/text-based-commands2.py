@@ -7,10 +7,16 @@ dx = [0, 1, 0, -1]
 dy = [1, 0, -1, 0]
 
 d = 0
+cx = 0
+cy = 0
 for dir in dirs:
     if dir == "L":
         d = (d - 1) % 4
     elif dir == "R":
         d = (d + 1) % 4
+    else:
+        cx += dx[d]
+        cy += dy[d]
 
-print(dx[d], dy[d])
+
+print(cx, cy)
