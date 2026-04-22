@@ -25,6 +25,7 @@ def check_diag(si, sj):
             return None
     return num, (si + 2, sj + 2)
 
+flag = True
 # 가로부터
 for i in range(19):
     for j in range(15):
@@ -34,6 +35,7 @@ for i in range(19):
                 num, (x, y) = val
                 print(num)
                 print(x + 1, y + 1)
+                flag = False
 
 for i in range(15):
     for j in range(19):
@@ -43,6 +45,7 @@ for i in range(15):
                 num, (x, y) = val
                 print(num)
                 print(x + 1, y + 1)
+                flag = False
 
 for i in range(15):
     for j in range(15):
@@ -52,4 +55,7 @@ for i in range(15):
                 num, (x, y) = val
                 print(num)
                 print(x + 1, y + 1)
-print(0)
+                flag = False
+
+if flag:
+    print(0)
