@@ -22,5 +22,5 @@ for i in range(n - 2):
         for k in range(j + 1, n):
             summation = check_carry(arr[i], arr[j], arr[k])
             if summation:
-                ans = summation
+                ans = max(ans, summation)
 print(ans)
