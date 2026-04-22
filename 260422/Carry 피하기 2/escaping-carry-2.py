@@ -11,7 +11,7 @@ def check_carry(num1, num2, num3):
     str_num3 = str(num3).zfill(max_len)
 
     for idx in range(max_len):
-        if int(str_num1[idx]) + int(str_num2[idx]) + int(str_num3[idx]) > 10:
+        if int(str_num1[idx]) + int(str_num2[idx]) + int(str_num3[idx]) >= 10:
             return 0
 
     return num1 + num2 + num3
