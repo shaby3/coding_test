@@ -8,7 +8,7 @@ a = [int(input()) for _ in range(n)]
 # 출발 위치 2를 시작 위치로 잡으면 3은 거리가 1 단 1은 거리가 4 n이 5 기준
 # e - s 가 만약 마이너스라면 n을 더해주면 된다.
 
-ans = 1003 * 100
+ans = float('inf')
 
 for s in range(n):
     dist = 0
