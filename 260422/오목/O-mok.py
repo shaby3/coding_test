@@ -68,7 +68,7 @@ for i in range(15):
 for i in range(15):
     for j in range(4, 19):
         if board[i][j] != 0:
-            val = check_diag(i, j)
+            val = check_rev_diag(i, j)
             if val is not None:
                 num, (x, y) = val
                 print(num)
