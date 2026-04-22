@@ -56,10 +56,16 @@ def func():
                     break
             else:
                 return num, (i + 2, j - 2)
+    return None
 
-num, coord = func()
+result = func()
 
-print(num)
-print(coord[0] + 1, coord[1] + 1)
+if result is None:
+    print(0)
+else:
+    num = result[0]
+    coord = result[1]
+    print(num)
+    print(coord[0] + 1, coord[1] + 1)
 
 
