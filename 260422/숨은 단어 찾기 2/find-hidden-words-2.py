@@ -35,7 +35,7 @@ def func():
                     cury = ny
                     cnt += 1
                 
-                if cnt == 3:
+                if cnt >= 3:
                     ans += 1
     return ans
 
