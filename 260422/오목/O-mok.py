@@ -25,6 +25,14 @@ def check_diag(si, sj):
             return None
     return num, (si + 2, sj + 2)
 
+def check_rev_diag(si, sj):
+    num = board[si][sj]
+    for d in range(1, 5):
+        ni, nj = si + d, sj - d
+        if board[ni][nj] != num:
+            return None
+    return num, (si + 2, sj - 2)
+
 flag = True
 # 가로부터
 for i in range(19):
@@ -49,6 +57,16 @@ for i in range(15):
 
 for i in range(15):
     for j in range(15):
+        if board[i][j] != 0:
+            val = check_diag(i, j)
+            if val is not None:
+                num, (x, y) = val
+                print(num)
+                print(x + 1, y + 1)
+                flag = False
+
+for i in range(15):
+    for j in range(4, 19):
         if board[i][j] != 0:
             val = check_diag(i, j)
             if val is not None:
