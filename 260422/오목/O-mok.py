@@ -52,3 +52,4 @@ for i in range(15):
                 num, (x, y) = val
                 print(num)
                 print(x + 1, y + 1)
+print(0)
