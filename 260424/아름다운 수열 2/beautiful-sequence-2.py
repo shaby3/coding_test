@@ -6,8 +6,6 @@ B = list(map(int, input().split()))
 
 # Please write your code here.
 # perms = list(map(list, permutations(B)))
-perms = list(permutations(B))
-
 
 ans = 0
 for i in range(N - M + 1):
