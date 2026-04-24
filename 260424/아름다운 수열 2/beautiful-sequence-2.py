@@ -11,9 +11,11 @@ perms = list(permutations(B))
 
 ans = 0
 for i in range(N - M + 1):
-    
-    if tuple(A[i:i+M]) in perms:
-        ans += 1
+    cur_val = A[i: i + M]
+    for b in permutations(B):
+        if tuple(cur_val) == b:
+            ans += 1
+            break
 
     
 print(ans)
