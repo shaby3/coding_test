@@ -1,4 +1,4 @@
-from 
+from itertools import permutations
 
 N, M = map(int, input().split())
 A = list(map(int, input().split()))
@@ -12,6 +12,5 @@ for i in range(N - M + 1):
     cur_val = A[i: i + M]
     if cur_val in perms:
         ans += 1
-        break
 print(ans)
 
