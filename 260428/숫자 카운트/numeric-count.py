@@ -37,5 +37,4 @@ for i in range(1, 10):
                     cnt += 1
             if cnt == n:
                 ans += 1
-                print(i, j, k)
 print(ans)
