@@ -12,7 +12,7 @@ for i in range(5):
             for l in range(k + 1, 5):
                 if l == i or l == j:
                     continue
-                team2 = arr[k] + arr[j]
+                team2 = arr[k] + arr[l]
                 team3 = total_abil - team2 - team1
                 if team2 == team3 or team1 == team2 or team3 == team1:
                     continue
