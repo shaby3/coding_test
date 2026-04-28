@@ -14,7 +14,12 @@ for i in range(5):
                     continue
                 team2 = arr[k] + arr[j]
                 team3 = total_abil - team2 - team1
+                if team2 == team3 or team1 == team2 or team3 == team1:
+                    continue
                 ans = min(ans, max(team1, team2, team3) - min(team1, team2, team3))
 
-print(-1) if ans == 0 else print(ans)
+if ans == float('inf'):
+    print(-1)
+else:
+    print(ans)
                 
