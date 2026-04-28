@@ -29,12 +29,14 @@ ans = 0
 for i in range(1, 10):
     for j in range(1, 10):
         for k in range(1, 10):
-            cnt = 0
-            for target_num, cnt1, cnt2 in zip(a, b, c):
-                cnt_1, cnt_2 = get_cnt([i, j, k], target_num)
-                cur_num = i * 100 + j * 10 + k
-                if cnt_1 == cnt1 and cnt_2 == cnt2:
-                    cnt += 1
-            if cnt == n:
-                ans += 1
+            if i != j and j != k and i != k:
+                cnt = 0
+                for target_num, cnt1, cnt2 in zip(a, b, c):
+                    cnt_1, cnt_2 = get_cnt([i, j, k], target_num)
+                    cur_num = i * 100 + j * 10 + k
+                    if cnt_1 == cnt1 and cnt_2 == cnt2:
+                        cnt += 1
+                if cnt == n:
+                    ans += 1
+                    # print(i, j, k)
 print(ans)
